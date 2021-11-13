@@ -4,7 +4,7 @@
 
 from calc.calculation import Calculation
 
-#This is how you extend the addition class with the calculation
+#This is how you extend the addition calss with the calculation
 class Multiplication(Calculation):
     """The addition class has one method to get the result of the calculation A and B come from
     the calulation parent"""
