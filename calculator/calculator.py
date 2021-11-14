@@ -1,5 +1,4 @@
 """This is the increment function"""
-# first import the addition namespace
 from calc.addition import Addition
 from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
