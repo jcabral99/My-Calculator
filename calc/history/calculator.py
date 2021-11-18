@@ -2,6 +2,7 @@
 from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
+from calc.calculations.division import Division
 
 class Calculator:
     """ This is the Calculator class"""
@@ -36,3 +37,8 @@ class Calculator:
         """ multiplication number from result"""
         multiplication = Multiplication(args)
         return multiplication.get_result()
+    @staticmethod
+    def division_numbers(*args):
+        """divide number from result"""
+        division = Division(args)
+        return division.get_result()
