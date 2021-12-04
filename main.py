@@ -23,6 +23,7 @@ def process(files):
             df["Result"] = results_arr
             with open(f"output_csvs/{basename}", "w") as fp:
                 df.to_csv(fp)
+                # to remove add os.remove(file)
         if basename == "subtraction.csv":
             print("sub")
             df = pd.read_csv(file)
@@ -86,7 +87,7 @@ def main():
     # print(files)
     files_len = len(files)
     while True:
-        if files_len is not 0:
+        if files_len != 0:
             print("Processing...")
             done = process(files)
             files_len = done
