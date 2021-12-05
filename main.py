@@ -17,7 +17,8 @@ def process(files):
             for index, row in df.iterrows():
                 temp = Calculator.add_number(row['Value_1'], row['Value_2'])
                 with open("results/results.txt", "a") as fp:
-                    fp.write(f"Time: {time.time()}, File: {file}, Record Number: {index}, Operation: add, Result: {temp}\n")
+                    fp.write(f"Time: {time.time()}, File: {file}, "
+                             f"Record Number: {index}, " f"Operation: add, Result: {temp}\n")
                     fp.close()
                 results_arr.append(temp)
             df["Result"] = results_arr
@@ -32,7 +33,8 @@ def process(files):
                 temp = Calculator.subtract_number(row['Value_1'], row['Value_2'])
                 with open("results/results.txt", "a") as fp:
                     fp.write(
-                        f"Time: {time.time()}, File: {file}, Record Number: {index}, Operation: subtract, Result: {temp}\n")
+                        f"Time: {time.time()}, File: {file}, Record Number: {index}, "
+                        f"Operation: subtract, Result: {temp}\n")
                     fp.close()
                 results_arr.append(temp)
             df["Result"] = results_arr
@@ -46,7 +48,8 @@ def process(files):
                 temp = Calculator.multiply_numbers(row['Value_1'], row['Value_2'])
                 with open("results/results.txt", "a") as fp:
                     fp.write(
-                        f"Time: {time.time()}, File: {file}, Record Number: {index}, Operation: multiply, Result: {temp}\n")
+                        f"Time: {time.time()}, File: {file}, Record Number: {index}, "
+                        f"Operation: multiply, Result: {temp}\n")
                     fp.close()
                 results_arr.append(temp)
             df["Result"] = results_arr
@@ -69,7 +72,8 @@ def process(files):
                     temp = Calculator.divide_numbers(row['Value_1'], row['Value_2'])
                     # Write to log
                     with open("results/results.txt", "a") as fp:
-                        fp.write(f"Time: {time.time()}, File: {file}, Record Number: {index}, Operation: divide, Result: {temp}\n")
+                        fp.write(f"Time: {time.time()}, File: {file}, Record Number: {index}, "
+                                 f"Operation: divide, Result: {temp}\n")
                         fp.close()
                     results_arr.append(temp)
 
@@ -93,6 +97,7 @@ def main():
             files_len = done
         else:
             print("Running...", end="\r")
+
         
     return True
 
