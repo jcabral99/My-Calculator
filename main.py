@@ -92,10 +92,7 @@ def main():
             done = process(files)
             files_len = done
         else:
-            print("Running |", end="\r")
-            print("Running /", end="\r")
-            print("Running -", end="\r")
-            print("Running \\", end="\r")
+            print("Running...", end="\r")
         
     return True
 
