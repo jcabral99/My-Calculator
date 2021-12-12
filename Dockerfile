@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:3.8-buster
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN /usr/local/bin/python -m pip install flask uWSGI
 ENV FLASK_APP=app/app.py
