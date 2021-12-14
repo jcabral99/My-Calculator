@@ -10,7 +10,6 @@ class CalculatorController(ControllerBase):
             error = 'You must enter a value for value 1 and or value 2'
         else:
             flash('You successfully calculated')
-            flash('You are awesome')
 
             # get the values out of the form
             value1 = request.form['value1']
