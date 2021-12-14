@@ -15,5 +15,6 @@ services:
     build: ./ngnix
     container_name: nginx
     restart: always
+    image: nginx:latest
     ports:
       - "80:80"
