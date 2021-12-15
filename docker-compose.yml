@@ -12,9 +12,9 @@ services:
     volumes:
       - .:/home/myuser
   nginx:
-    build: ./ngnix
+    build: ./nginx
     container_name: nginx
     restart: always
-    image: nginx:latest
+    image: mycalculator-nginx:latest
     ports:
       - "80:80"

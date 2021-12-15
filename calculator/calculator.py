@@ -4,6 +4,9 @@ from calc.addition import Addition
 from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
 from calc.division import Division
+# from csvmanager.read import Read
+# from csvmanager.Write import Write
+# import pandas as pd
 
 class Calculator:
     """This is the Calculator class"""
@@ -24,29 +27,41 @@ class Calculator:
         return True
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
-        return Calculator.history[-1].getresult()
+        if Calculator.history[-1] != "NaN":
+            return Calculator.history[-1].get_result()
+        return Calculator.history[-1]
+
     @staticmethod
-    def add_number(value_a, value_b):
+    def addition(value_a, value_b):
         """adds number to result"""
         addition = Addition.create(value_a,value_b)
         Calculator.add_calculation_to_history(addition)
+        # df = Read.DataFrameFromCSVFile()
+        # dict = {'Value1': value_a, 'Value2': value_b, 'Results': addition.get_result()}
+        # df2 = pd.DataFrame(dict)
+        # df3 = pd.concat([df,df2], ignore_index=True)
+        # Write.DataFrameFromCSVFile(df3)
         return Calculator.get_result_of_last_calculation_added_to_history()
     @staticmethod
-    def subtract_number(value_a, value_b):
+    def subtraction(value_a, value_b):
         """"subtract number from result"""
         subtraction = Subtraction.create(value_a, value_b)
         Calculator.add_calculation_to_history(subtraction)
         return Calculator.get_result_of_last_calculation_added_to_history()
 
     @staticmethod
-    def multiply_numbers(value_a, value_b):
+    def multiplication(value_a, value_b):
         """multiply two numbers and store the result"""
         multiplication = Multiplication.create(value_a,value_b)
         Calculator.add_calculation_to_history(multiplication)
         return Calculator.get_result_of_last_calculation_added_to_history()
     @staticmethod
-    def divide_numbers(value_a,value_b):
+    def division(value_a,value_b):
         """divide two numbers and store the result"""
-        division = Division.create(value_a,value_b)
-        Calculator.add_calculation_to_history(division)
-        return Calculator.get_result_of_last_calculation_added_to_history()
+        if value_b != 0:
+            division = Division.create(value_a,value_b)
+            Calculator.add_calculation_to_history(division)
+            return
+        else:
+            Calculator.history.append("NaN")
+            return Calculator.get_result_of_last_calculation_added_to_history()

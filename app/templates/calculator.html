@@ -19,10 +19,10 @@
   <div class="mb-3 row">
 
     <form action="/calculator" method="POST">
-        <label for="value1" class="col-sm-2 col-form-label">Value 1:</label><br>
-        <input type="text" id="value1" name="value1" value="1"><br>
-        <label for="value2" class="col-sm-2 col-form-label">Value 2:</label><br>
-        <input type="text" id="value2" name="value2" value="2"><br>
+        <label for="value_a" class="col-sm-2 col-form-label">Value 1:</label><br>
+        <input type="text" id="value_a" name="value_a" value="1"><br>
+        <label for="value_b" class="col-sm-2 col-form-label">Value 2:</label><br>
+        <input type="text" id="value_b" name="value_b" value="2"><br>
         <fieldset>
         <legend>Operation</legend>
           <div>
@@ -36,6 +36,10 @@
           <div>
             <input type="radio" name="operation" id="multiplication" value="multiplication">
             <label for="multiplication">multiplication</label>
+          </div>
+          <div>
+            <input type="radio" name="operation" id="division" value="division">
+            <label for="division">division</label>
           </div>
         </fieldset>
 

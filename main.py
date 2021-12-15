@@ -15,7 +15,7 @@ def process(files):
             df = pd.read_csv(file)
             results_arr = []
             for index, row in df.iterrows():
-                temp = Calculator.add_number(row['Value_1'], row['Value_2'])
+                temp = Calculator.addition(row['Value_1'], row['Value_2'])
                 with open("results/results.txt", "a") as fp:
                     fp.write(f"Time: {time.time()}, File: {file}, "
                              f"Record Number: {index}, " f"Operation: add, Result: {temp}\n")
@@ -30,7 +30,7 @@ def process(files):
             df = pd.read_csv(file)
             results_arr = []
             for index, row in df.iterrows():
-                temp = Calculator.subtract_number(row['Value_1'], row['Value_2'])
+                temp = Calculator.subtraction(row['Value_1'], row['Value_2'])
                 with open("results/results.txt", "a") as fp:
                     fp.write(
                         f"Time: {time.time()}, File: {file}, Record Number: {index}, "
@@ -45,7 +45,7 @@ def process(files):
             df = pd.read_csv(file)
             results_arr = []
             for index, row in df.iterrows():
-                temp = Calculator.multiply_numbers(row['Value_1'], row['Value_2'])
+                temp = Calculator.multiplication(row['Value_1'], row['Value_2'])
                 with open("results/results.txt", "a") as fp:
                     fp.write(
                         f"Time: {time.time()}, File: {file}, Record Number: {index}, "
@@ -69,7 +69,7 @@ def process(files):
                     results_arr.append("NaN")
                 else:
                     # Operation
-                    temp = Calculator.divide_numbers(row['Value_1'], row['Value_2'])
+                    temp = Calculator.division(row['Value_1'], row['Value_2'])
                     # Write to log
                     with open("results/results.txt", "a") as fp:
                         fp.write(f"Time: {time.time()}, File: {file}, Record Number: {index}, "

@@ -1,26 +1,24 @@
 from app.controllers.controller import ControllerBase
-from app.calulator import Calculator
+from calculator.calculator import Calculator
 from flask import render_template, request, flash, redirect, url_for
 
 
 class CalculatorController(ControllerBase):
     @staticmethod
     def post():
-        if request.form['value1'] == '' or request.form['value2'] == '':
+        if request.form['value_a'] == '' or request.form['value_b'] == '':
             error = 'You must enter a value for value 1 and or value 2'
         else:
             flash('You successfully calculated')
 
             # get the values out of the form
-            value1 = request.form['value1']
-            value2 = request.form['value2']
+            value_a = request.form['value_a']
+            value_b = request.form['value_b']
             operation = request.form['operation']
-            # make the tuple
-            my_tuple = (value1, value2)
             # this will call the correct operation
-            getattr(Calculator, operation)(my_tuple)
-            result = str(Calculator.get_last_result_value())
-            return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
+            getattr(Calculator, operation)(int(value_a), int(value_b))
+            result = str(Calculator.get_result_of_last_calculation_added_to_history())
+            return render_template('result.html', value_a=value_a, value_b=value_b, operation=operation, result=result)
         return render_template('calculator.html', error=error)
     @staticmethod
     def get():
