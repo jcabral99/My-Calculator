@@ -7,7 +7,28 @@
     </style>
 {% endblock %}
 {% block content %}
-    <h1>Result</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>value 1</th>
+                <th>value 2</th>
+                <th>operation</th>
+                <th>results</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in result_long %}
+            
+            <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h1>result</h1>
     <strong>Value 1: </strong> {{ value_a }} <br>
     <strong>Value 2: </strong> {{ value_b }} <br>
     <strong>Operation: </strong> {{ operation }} <br>

@@ -15,10 +15,14 @@ class CalculatorController(ControllerBase):
             value_a = request.form['value_a']
             value_b = request.form['value_b']
             operation = request.form['operation']
+            print(f"val a: {value_a}")
+            print(f"val b: {value_b}")
+            print(operation)
             # this will call the correct operation
             getattr(Calculator, operation)(int(value_a), int(value_b))
             result = str(Calculator.get_result_of_last_calculation_added_to_history())
-            return render_template('result.html', value_a=value_a, value_b=value_b, operation=operation, result=result)
+            result_long = Calculator.get_all_results()
+            return render_template('result.html', value_a=value_a, value_b=value_b, operation=operation, result=result, result_long=result_long)
         return render_template('calculator.html', error=error)
     @staticmethod
     def get():

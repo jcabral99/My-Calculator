@@ -20,4 +20,8 @@ def calculator_get():
 def calculator_post():
     return CalculatorController.post()
 
+@app.route("/test", methods=["GET"])
+def test_get():
+    return render_template('test.html')
+
 
