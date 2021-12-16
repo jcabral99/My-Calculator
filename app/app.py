@@ -21,18 +21,18 @@ def calculator_get():
 def calculator_post():
     return CalculatorController.post()
 
-@app.route("/Page1", methods=["GET"])
+@app.route("/TheBeginning", methods=["GET"])
 def test_get1():
     return render_template('The_Beginning.html')
 
-@app.route("/Page2", methods=["GET"])
+@app.route("/BrowserWars", methods=["GET"])
 def test_get2():
     return render_template('Browser_Wars.html')
 
-@app.route("/Page3", methods=["GET"])
+@app.route("/Concepts", methods=["GET"])
 def test_get3():
     return render_template('Concepts_and_Glossary.html')
 
-@app.route("/Page4", methods=["GET"])
+@app.route("/OOP", methods=["GET"])
 def test_get4():
     return render_template('OOP.html')

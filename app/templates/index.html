@@ -2,19 +2,24 @@
 {% block title %}Index{% endblock %}
 {% block head %}
     {{ super() }}
-    <style type="text/css">
+    <style>
         .important { color: #336699; }
+    
+        .content {
+            max-width: 500px;
+            margin: auto; }
     </style>
 {% endblock %}
 {% block content %}
-    <h1>Welcome to my Calculator</h1>
+    <h1 text-align="center">Welcome to my Calculator</h1>
     <p class="important">
         <img src="https://images.pexels.com/photos/5184951/pexels-photo-5184951.jpeg?cs=srgb&dl=pexels-cottonbro-5184951.jpg&fm=jpg"
         width="400" height="400" float="center">
     </p>
-    <p text-align= "center">
-        Navigate to the Calculation Tab to solve any equation using addition, subtraction, multiplication, or division. You will also be able to see a list of your calculations and results on the Results tab. 
-    </p>
-
-<a href="/good/1.0/2.0">One Plus Two Good</a><br><a href="/bad/1/2">One Plus Two Bad</a>
+    <p>
+        Navigate to the Calculation Tab to solve any equation using addition, subtraction, multiplication, or division. Your results will show in a table.
+    </p> 
+    <p>
+        You can also navigate to Pages 1 - 4 to learn about the internet history and some programming concepts.
+    </p>         
 {% endblock %}
