@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Concepts & Glossary</title>
+    <style>
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+        @media screen and (max-width: 700px){
+            .row {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Content here -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/calculator">Calculations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/result">Results</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Page1">Page 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Page2">Page 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=".Page3">Page 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Page4">Page 4</a>
+                </li>
+            </ul>
+        </div>
+</nav>
+    <div class="row">
+        <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?cs=srgb&dl=pexels-manuel-geissinger-325229.jpg&fm=jpg"
+             width="1295" height="300" alt="servers">
+    </div>
+    <br>
+    <div class="row">
+        <h1>Python Concepts</h1>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+
+        <div class="col-8">
+            <h3>Pylint Beginners</h3>
+            <p>
+                Every good programmer will know how to use Python, but they will also know how to apply Pylint to any code that they are writing. Pylint will allow for you to test the information that you are writing up. It will show any user what errors they are making within their code, which will help them avoid problems later on.
+            </p>
+            <br>
+            <p>
+                There are a series of steps to take to be able to implement Pylint within your code. You will begin by installing Pylint:
+            </p>
+            <ul>
+                <li>You need to add the file <code>.pylintrc</code>, which will allow for pylint to be configured</li>
+                <li>Typically, the <code>.pylintrc</code> file will have a makeup of what you want to be checked and what you DO NOT want to be checked for specific errors</li>
+                <li>You will also need to add a <code>requirements.txt</code> file which will include a list of what tests you want to run</li>
+                <dd> - Some examples would be <code>pytest-cov, pytest, pytest-pylint</code></dd>
+                <li>Once those files are created you will need to run "Pip Install" within the terminal. This will make sure that all tests are configured and you will be able to test the code through commands</li>
+                <li>Within the terminal you will write <code>pip install -r requirements.txt</code> this command will configure all the tests listed out in the <code>requirement.txt</code> file</li>
+                <li>Once that is complete you are able to run the command: <code>pytest --pylint</code></li>
+                <li>The commands will run and it will give back any errors of failed code. It will also give suggestions on how to help fix any errors within the code and will also show what test have passed within your code.</li>
+            </ul>
+            <p>
+                All of these steps will help you run Pylint through your code. It will help any beginner find errors within their code and ensure that they are able to fix any issues.
+            </p>
+        </div>
+        <div class="col">
+            <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?cs=srgb&dl=pexels-christina-morillo-1181671.jpg&fm=jpg"
+                 width="400" height="400" alt="python">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+
+        <div class="col-8">
+            <h3>Object-Oriented Programming Glossary</h3>
+            <p>
+                Below you will find a glossary of terms that will help you understand some basics of Object-Oriented Programming (OOP). If you navigate to the Python dropdown menu in the OOP tab you will be able to learn more about how different concepts are applied within a program.
+            </p>
+            <ul>
+                <li><b>Object</b> – An instance of a class that is created at runtime. In C#, an instance is created with the new keyword</li>
+                <li><b>Class</b> – Code describing a specific entity in the application. Class contains the code defining the properties and methods</li>
+                <dd>- Example: Student or address</dd>
+                <li><b>Property</b> – Code defining the data managed by the class</li>
+                <dd>- Example: StudentName or EmailAddress</dd>
+                <li><b>Method</b> – code defining the actions or behaviors of the class. Methods are defined in the code with C# functions</li>
+                <dd>- Example: Validate or CalculateTotal</dd>
+                <li><b>Constructor</b> – Code that is executed each time an instance of the class is created</li>
+                <li><b>Unit test</b> – Ensure that each individual part of the code is working well and that it is supposed to work</li>
+                <li><b>Object-Oriented Programming</b> – A design and building application that is easy, natural, well- crafted, and testable by focusing on objects that interact cleanly with one another</li>
+                <li><b>Static</b> - Does not receive an implicit first argument. This is bound to the class and not the object of the class.</li>
+                <li><b>Class Method</b> - It is a built-in function decorator that is an expression that gets evaluated after your function is defined. The results shadows your function definition</li>
+                <li><b>Façade</b> - Structural design pattern that provides a simpler unified interface to a more complex system. Face of a building or particularly an outer lying interface of a complex system, consisting of several sub-systems.</li>
+                <li><b>Design Patterns Used</b> - Most essential part of Software Engineering, that provides general repeatable solutions to a commonly occurring problem in software design. Consists of creational design, structural design, and behavioral design patterns.</li>
+                <li><b>Fixture</b> - Defines the steps and data that constitute the arrange phase of a test.</li>
+                <li><b>Type Hint</b> - A formal solution to statically indicate the type of value within your Python code.</li>
+                <li><b>Type Cast</b> - Different ways of changing an expression from one data type to another.</li>
+                <li><b>Factory</b> - A creational design pattern which solves the problem of creating product objects without specifying their class.</li>
+                <li><b>Instantiation</b> - Any time a new context is created based on some model.</li>
+                <li><b>Namespace</b> - A set of signs that are used to identify and refer to objects of various kinds.</li>
+            </ul>
+
+        </div>
+        <div class="col">
+            <img src="https://images.pexels.com/photos/5929346/pexels-photo-5929346.jpeg?cs=srgb&dl=pexels-ravi-kant-5929346.jpg&fm=jpg"
+                 width="400" height="500" alt="dictionary">
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<div class="row">
+    <footer id="footer" style="text-align: center">
+        Juliann Cabral&#169; <br>
+        <a href="https://github.com/jcabral99/history-internet/tree/master/public_html">
+            <link> GitHub Repo </link>
+        </a>
+        <br>
+        <a href="https://validator.w3.org/nu/#file">
+            <img src="http://www.w3.org/Icons/valid-html20" alt="badge">
+        </a>
+    </footer>
+</div>
+
+</body>
+</html>

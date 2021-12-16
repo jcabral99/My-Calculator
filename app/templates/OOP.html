@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>OOP</title>
+    <style>
+        .navbar a {
+            display: block;
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+
+
+        }
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+        @media screen and (max-width: 700px){
+            .row {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Content here -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Calculator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/calculator">Calculations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/result">Results</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Page1">Page 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Page2">Page 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=".Page3">Page 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Page4">Page 4</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?cs=srgb&dl=pexels-manuel-geissinger-325229.jpg&fm=jpg"
+             width="1295" height="300" alt="servers">
+    </div>
+    <br>
+    <div class="row">
+        <h1>Object Oriented Programming (OOP)</h1>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+
+        <div class="col-8">
+            <h3>Principles</h3>
+            <p>
+                When using OOP there are 4 main principles that you can follow: Encapsulation, Inheritance, Polymorphism, and Abstraction.
+            </p>
+            <ul>
+                <li><b>Encapsulation: </b></li> Allows for a restriction in access to methods and variables; prevents data from direct modification; we denote private attributes using underscore as the prefix
+                <li><b>Inheritance: </b></li> Is a way of creating a new class while using details from an existing class without modifying it – parent and child class – the child derives from the parent class and all their attributes
+                <li><b>Polymorphism: </b></li> Ability to use a common interface for multiple forms of data types. Allows you to use a class exactly like its parent so there is no confusion with mixing, but each child class keeps its own method as is.
+                <li><b>Abstraction: </b></li> Considered the blueprint for other classes. Allows you to create a set of methods that must be created within any child classes built from the abstract class.
+            </ul>
+        </div>
+        <div class="col">
+            <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?cs=srgb&dl=pexels-christina-morillo-1181673.jpg&fm=jpg"
+                 width="400" height="400" alt="programming">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+
+        <div class="col-8">
+            <h3>Using OOP</h3>
+            <p>
+                We will use the same Calculator program to show how the principles of OOP are used. We will begin with Abstraction. Knowing the definition will help us break down exactly how it is used in the calculator.
+            </p>
+            <ul style="list-style-type: none">
+                <li><b>Abstraction:</b></li>
+                <li><code style="color:cadetblue">This is our calculation base class/ Abstract class</code></li>
+                <li><code style="color:red">class Calculation</code></li>
+                <li><code style="color: red">def _init_(self,value_a, value_b)</code></li>
+                <li><code style="color: red">self.value_a = value_a</code></li>
+                <li><code style="color: red">self.value_b = value_b</code></li>
+            </ul>
+            <p>
+                We are creating a Calculation class which is known as the base or abstract class that will be used throughout our calculator program. This sets a blueprint for other class when needing to call the abstract class.
+            </p>
+            <ul style="list-style-type: none">
+                <li><b>Encapsulation/ Inheritance</b></li>
+                <li><code style="color:cadetblue">This is the addition calculation that is being inherits the Value A and Value B from the Calculation Class</code></li>
+                <li><code style="color:red">from Calc.calculation import Calculation</code></li>
+                <li><code style="color: red">class Addition(calculation)</code></li>
+                <li><code style="color:cadetblue">This addition class has one method to get the result of the calculation A and B come fro the calculation parent</code></li>
+                <li><code style="color: red">def getresult(self)</code></li>
+                <li><code style="color:cadetblue">You need to use self to reference the data contained in the instance of the object. This is Encapsulation.</code></li>
+                <li><code style="color: red">return self.value_a + self.value_b</code></li>
+            </ul>
+            <p>
+                Encapsulation is being used within the addition function by calling the direct calculation class. We then use self to help us add the values together. No other class is allowed to touch this function since we are keeping it private.
+            </p>
+            <p>
+                We also see the way that inheritance is being used within this code. The addition function is calling upon the Calculation class for the Value A and B. You will see that we end up using the Calculation class throughout the other functions of the calculator as well. The Calculation class is known as the parent while the other functions are the children. They all inherit Value A and B from their parent.
+            </p>
+            <ul style="list-style-type: none">
+                <li><b>Polymorphism</b></li>
+                <li><code style="color:cadetblue">Testing the Calculator</code></li>
+                <li><code style="color:red">from calculator.calculator import Calculator</code></li>
+                <li><code style="color: red">def test_calculator_add(clearhistory)</code></li>
+                <li><code style="color:cadetblue">testing the add function of the calculator</code></li>
+                <li><code style="color: red">assert Calculator.add_number(1,2) == 3</code></li>
+                <li><code style="color: red">assert Calculator.add_number(2,2) == 4</code></li>
+                <li><code style="color: red">assert Calculator.history_count() == 2</code></li>
+            </ul>
+            <p>
+                Polymorphism means many forms, so the same function is being used for different types. We this is happening when testing the addition function. We known that addition has a class created that will add value a and value b. So by testing the code we are able to add many different numbers together and even count how many calculations have been done.
+            </p>
+        </div>
+        <div class="col">
+            <img src="https://images.pexels.com/photos/5428833/pexels-photo-5428833.jpeg?cs=srgb&dl=pexels-olya-kobruseva-5428833.jpg&fm=jpg"
+                 width="400" height="600" alt="think">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+
+        <div class="col-15" style="text-align: center">
+            <h3>Find out More</h3>
+            <p>
+                We see that through the calculator many of the principles are used within each other to create a program. The more you understand how to use the principles within OOP the easier it will become. You can click the link below to find more example of these principles and how they are used within the calculator program.
+            </p>
+            <p>
+                <a href="https://github.com/jcabral99/My-Calculator/tree/Triple_A_Testing"><link> Click Here </link></a>,to navigate to the GitHub Repo, there you can click on the file "Calc, Calculator, and Test" to find different examples of how the OOP principles are being used.
+            </p>
+        </div>
+
+    </div>
+    <br>
+</div>
+<br>
+<br>
+<br>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+<div class="row">
+    <footer id="footer" style="text-align: center">
+        Juliann Cabral&#169; <br>
+        <a href="https://github.com/jcabral99/history-internet/tree/master/public_html">
+            <link> GitHub Repo </link>
+        </a>
+        <br>
+        <a href="https://validator.w3.org/nu/#file">
+            <img src="http://www.w3.org/Icons/valid-html20" alt="badge">
+        </a>
+    </footer>
+</div>
+
+</body>
+</html>
